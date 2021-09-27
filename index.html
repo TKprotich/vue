@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Vue Mastery</title>
+    <!-- Import Styles -->
+    <link rel="stylesheet" href="./assets/styles.css" />
+    <!-- Import Vue.js -->
+    <script src="https://unpkg.com/vue@3.0.0-beta.12/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <div class="nav-bar"></div>
+   
+
+    <div id="app">
+      <div class="cart">
+        <p>Cart{{cart}}</p>
+      </div>
+
+     <product :premium="premium" @add-to-cart="updateCart" @delete-from-cart ="removeFromCart"></product>
+     <product-details></product-details>
+     <div class="review-container">
+     <h3>Product reviews</h3>
+      <p v-if = "!reviews.length" >No reviews here</p>
+      <ol>
+      <li v-for="review in reviews">{{review}}</li>
+      </ol>
+    </div>
+     <product-review @review-submitted = "addReview"></product-review>
+    </div>
+
+    <!-- Import Js -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>
