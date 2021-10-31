@@ -10,7 +10,7 @@ In Python, it is best to read the traceback from the bottom moving up. The last 
 
 There are a few differences between tracebacks output when executing your code in the command-line and running code in the REPL; below is the same code from the previous section completed in a `REPL` and the resulting traceback output.
 
-\```pycon
+```pycon
 >>> def greet( someone ):
 >>>
 ...   print('Hello, ' +someon)
