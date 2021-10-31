@@ -1,6 +1,6 @@
 # vue
 Practicing Vue js
-```pycon
+\```pycon
 >>> def greet( someone ):
 >>>
 ...   print('Hello, ' +someon)
